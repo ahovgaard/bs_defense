@@ -1,6 +1,8 @@
 %
-% First dry-run: 11.5 minutes
-%   Remember to say what a $k$-mer is; maybe have separate slide about K-Clust
+% Slides for my bachelor's thesis defense.
+%
+% 1st dry-run: 11.5 minutes
+%   Remember to say what a k-mer is; maybe have separate slide about K-Clust
 %   or at least show the intersection criterion.
 %
 \documentclass{beamer}
@@ -67,9 +69,7 @@
 \section{Distance metrics}
 \subsection{Various distance metrics}
 
-\begin{frame}
-  \frametitle{Distance metrics}
-
+\begin{frame}{Distance metrics}
   There are various distance metrics:
 
   \begin{itemize}
@@ -84,14 +84,12 @@
 
 \subsection{The simple $d2$ algorithm}
 
-\begin{frame}
-  \frametitle{The simple $d2$ algorithm}
-
+\begin{frame}{The simple $d2$ algorithm}
   \begin{align*}
     S_1 &= ACTACAC \\
     S_2 &= ACAGAT
   \end{align*}
-
+  \vspace{-1.5em}
   \begin{itemize}
     \item Fill vectors with $k$-mer counts
   \end{itemize}
@@ -119,14 +117,15 @@
 
 \subsection{The \textsc{K-Dist} algorithm}
 
-\begin{frame}
-  \frametitle{The \textsc{K-Dist} algorithm}
-
+\begin{frame}{The \textsc{K-Dist} algorithm}
   A variant of the simple $d2$ algorithm:
 
   \begin{itemize}
     \item a single $k$-mer vector
     \item Manhattan distance
+      \[
+        \sum_{i=1}^{n} \abs{u_i - v_i}
+      \]
     \item window calculation
   \end{itemize}
 \end{frame}
@@ -199,9 +198,7 @@
 \section{Cluster analysis algorithms}
 \subsection{Various approaches to clustering}
 
-\begin{frame}
-  \frametitle{Cluster analysis algorithms}
-
+\begin{frame}{Cluster analysis algorithms}
   Various approaches to clustering:
 
   \begin{itemize}
@@ -214,6 +211,23 @@
 \end{frame}
 
 \subsection{The \textsc{K-Clust} algorithm}
+
+\begin{frame}{The \textsc{K-Clust} algorithm}
+  %\begin{itemize}
+  %  \item the clustering algorithm used in \texttt{klust}
+  %  \item the intersection criterion:
+  %    \[
+  %      \abs{K(s) \cap K(c)} \geq \abs{K(c)} \cdot id
+  %    \]
+  %\end{itemize}
+  The clustering algorithm used in \texttt{klust}.
+
+  \hfill \\
+
+  \begin{block}{The intersection criterion}
+    $\abs{K(s) \cap K(c)} \geq \abs{K(c)} \cdot id$
+  \end{block}
+\end{frame}
 
 \begin{frame}{The \textsc{K-Clust} algorithm}
   \begin{figure}
