@@ -1,9 +1,13 @@
 %
 % Slides for my bachelor's thesis defense.
 %
-% 1st dry-run: 11.5 minutes
+% 1st dry-run: 11:30 minutes
 %   Remember to say what a k-mer is; maybe have separate slide about K-Clust
 %   or at least show the intersection criterion.
+%
+% 2nd dry-run: 12:40 minutes
+%   Give more introduction, not just directly into the problem of partitioning
+%   sequencs.
 %
 \documentclass{beamer}
 
@@ -220,11 +224,14 @@
   %      \abs{K(s) \cap K(c)} \geq \abs{K(c)} \cdot id
   %    \]
   %\end{itemize}
-  The clustering algorithm used in \texttt{klust}.
+  \begin{itemize}
+    \item centroid based
+    \item the clustering algorithm used in \texttt{klust}
+  \end{itemize}
 
   \hfill \\
 
-  \begin{block}{The intersection criterion}
+  \begin{block}{Intersection criterion}
     $\abs{K(s) \cap K(c)} \geq \abs{K(c)} \cdot id$
   \end{block}
 \end{frame}
